@@ -1,0 +1,9 @@
+It is important to hash it as it is way more secure
+Every time we hash password it shoud result to same hashed value which gets stored in DB
+If db is ever breached our data would be safe
+Converting simple string to some gibbrish
+given the output no one can find out the input
+1 Way Process
+
+Encryption is 2 Way
+A string is locked with a key and unclocked(decryption) using the same key

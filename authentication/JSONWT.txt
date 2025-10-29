@@ -1,0 +1,5 @@
+JSON-some hashing function that works for JSON 
+WEB
+Token-A long string generated at end is Token
+original output is visible 
+Verification is done using tokens and password that is stored in backend server

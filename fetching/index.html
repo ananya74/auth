@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <script>
+        function getAnimalData1(){
+            console.log("Clicked")
+            fetch('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&outputsize=full&apikey=demo')
+                .then(function(response){
+                    response.json().then(function(res){
+                        console.log(res)
+                        const content=document.getElementById("data").innerHTML=JSON.stringify(res)
+                    })
+                    
+                })   
+        }
+        
+        //Async Approach
+        async function getAnimalData(){
+            console.log("Clicked")
+            const response=await('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&outputsize=full&apikey=demo')
+            const res=await response.json()
+            document.getElementById("data").innerHTML=JSON.stringify(res)
+            console.log(res)     
+        }
+        
+
+        
+    </script>
+
+    <button onclick="getAnimalData1()">
+        Get Animal Data
+    </button>
+    <p id="data"></p>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+a user sends a request to sign in with username and password the backend hashes
+the password and checks in DB whether they are correct
+if they are it sends backs a JWT which gets stored on browser local storage until
+user logged out
+
+for every request jwt is sent along
